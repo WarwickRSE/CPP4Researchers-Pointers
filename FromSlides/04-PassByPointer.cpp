@@ -8,7 +8,7 @@ void fn(int a){
 };
 
 // This function takes a pointer to an integer
-// The pointer is passed by value, but the data is passed at all
+// The pointer is passed by value, but the data is not passed at all
 // We follow the pointer to get to the data
 // Data in the caller is changed
 void fn_p(int * a){
