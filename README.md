@@ -25,3 +25,15 @@ with using pointers when they are necessary, but they are dangerous.
 Use them when needed, but if you're doing it because the proper way
 "looks hard" don't say we told you it was OK!
 
+## Why do some of your codes work when you say they don't?
+
+Undefined behaviour is... undefined. Since it can do anything, sometimes
+the thing it does is exactly what you'd want and expect.
+This is a very BAD THING because it means we can invoke undefined behaviour
+and not notice it. So if you run our examples, sometimes the things we
+say are wrong might seem to be right. If you can, try some different
+compilers, or different operating systems. Change the optimisation level,
+particularly up to O2 or O3. We promise they will go wrong eventually, but
+compiler writers aren't _trying_ to make strange things happen. They just happen
+as a consequence of complicated combinations.
+
