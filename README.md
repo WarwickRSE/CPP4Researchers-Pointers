@@ -16,6 +16,7 @@ so there can be no doubt.
 This will be:
 * /\* UP TO DATE \*/ - compliant with the latest C++ spirit
 * /\* OLD SCHOOL \*/ - uses old fashioned, C like style
+* /\* PLAIN WRONG \*/ - uses stuff that just will not work in general
 
 ## Why are we being so heavy handed
 
