@@ -1,4 +1,4 @@
-/* OLD SCHOOL and UP TO DATE and PLAIN WRONG */
+/* OLD SCHOOL and UP TO DATE */
 // Uses old idioms, proper ones and at the end does some wrong stuff too
 #include <iostream>
 #include <memory>
