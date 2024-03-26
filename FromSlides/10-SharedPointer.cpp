@@ -19,7 +19,7 @@ int main(){
   // the data should be freed
 
   //std::shared_ptr is a memory managing pointer that can be duplicated
-  // Can't attach it to data later - use it to create the memory as it owns it
+  // For now, lets say that we can't attach it to data later - use it to create the memory as it owns it
   // When the last shared_ptr is destroyed, the data is destroyed too
 
   // Create a shared pointer
@@ -33,9 +33,11 @@ int main(){
   {
     // Get another shared pointer to existing data by copying
     auto d3 = d2; // d3 points to same as d2
+    std::cout<<"Watcher with 5 has "<<d3.use_count()<<" live references\n";
     d3->say(); // This -> operator is equiv. to (*d3).say();
   }
   std::cout<<"Finished with d3 now, no watchers destroyed\n";
+  std::cout<<"Watcher with 5 now has "<<d2.use_count()<<" live references\n";
   std::cout<<"d2 still OK\n";
   d2->say();
 
