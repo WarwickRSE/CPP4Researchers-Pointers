@@ -18,6 +18,12 @@ This will be:
 * /\* OLD SCHOOL \*/ - uses old fashioned, C like style
 * /\* PLAIN WRONG \*/ - uses stuff that just will not work in general
 
+## What standard are we working to
+
+We tend to use auto and inline initialisers a lot, so consider everything
+to be at least C++11. Smart pointers are C++11, but the nicest way
+to work with them is C++14, and we use this freely. Ten years is long enough, surely!
+
 ## Why are we being so heavy handed
 
 Because academic teaching of C++ is often a terrible mish-mash of old
