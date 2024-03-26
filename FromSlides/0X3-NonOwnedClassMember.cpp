@@ -1,4 +1,5 @@
-/* OLD SCHOOL and UP TO DATE */
+/* OLD SCHOOL and UP TO DATE and PLAIN WRONG */
+// Uses old idioms, proper ones and at the end does some wrong stuff too
 #include <iostream>
 #include <memory>
 
@@ -158,6 +159,7 @@ int main(){
 
 
   // Destroying the data and trying to use it! BAD
+  /* PLAIN WRONG */
 
   int * dat = new int(43);
 
@@ -169,11 +171,13 @@ int main(){
   a2.print();
   b2.print();
 
+  /* END PLAIN WRONG */
+
   // Shared case does not allow dangling to happen!
   auto c2 = get_a_shared();
   c2.print();
 
-  // Weak case lets us detect it, all fine if we're careful
+  // Weak case lets us detect it, all fine if we're careful in implementation of my_new_class_weak
   auto d2 = get_a_weak();
   d2.print();
 
