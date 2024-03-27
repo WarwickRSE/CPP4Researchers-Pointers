@@ -24,11 +24,11 @@ int main(){
 
   // Create a unique pointer and then take its data
   std::cout<<"Taking the object from d1 - expect no destructions\n";
-  std::unique_ptr<watcher> d1 = std::make_unique<watcher>();
+  auto d1 = std::make_unique<watcher>();
   watcher * tmp = d1.release(); // data is ours now! We must clean up
 
   std::cout<<"Deleting the object at d2 - expect one destruction\n";
-  std::unique_ptr<watcher> d2 = std::make_unique<watcher>();
+  auto d2 = std::make_unique<watcher>();
   d2.reset();
   std::cout<<"Is d2 valid? "<<(d2?"true":"false")<<'\n';
 

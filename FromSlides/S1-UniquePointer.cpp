@@ -18,7 +18,7 @@ int main(){
   //std::unique_ptr is a memory managing pointer that can't be duplicated
   // Can't attach it to data later - use it to create the memory as it owns it
 
-  // Create a unique pointer
+  // Create a unique pointer. Not using auto for demo purposes only!
   std::unique_ptr<watcher> d1 = std::make_unique<watcher>();
 
   // Create another watcher, with its own ptr
