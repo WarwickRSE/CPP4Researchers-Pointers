@@ -4,8 +4,9 @@
 
 // This class only exists to tell us if it gets copied, deleted etc
 struct watcher{
+  int ii = 0;
   watcher(){std::cout<<"watcher created\n";}
-  watcher(int i){std::cout<<"watcher created with integer: "<<i<<"\n";}
+  watcher(int i){std::cout<<"watcher created with integer: "<<i<<"\n";ii=i;}
   watcher(const watcher& other){std::cout<<"watcher copied\n";}
   ~watcher(){std::cout<<"watcher deleted\n";}
 };
@@ -25,6 +26,9 @@ int main(){
   // Brackets are parameters to construct the object pointed to
   std::unique_ptr<watcher> d2 = std::make_unique<watcher>(5);
 
+  // Have to dereference to use, and need brackets. Shortcut is '->' operator which
+  // is equivalent: (* ptr).value <==> ptr->value
+  std::cout<<"Watcher values: "<<(*d1).ii<<" and "<<d2->ii<<'\n';
 
   std::cout<<"Program does programmy things here\n";
   std::cout<<"Program ending, expect two destructions\n";
