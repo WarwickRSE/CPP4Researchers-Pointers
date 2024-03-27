@@ -7,8 +7,9 @@ int main(){
   int data = 10;
 
   //A pointer to the data
-  int * p;
+  int * p = nullptr;
   // Has to be the right type
+  // Created with no particular value, so we should always set it
 
   // p can be pointed to any integer we like
   // Point it to data:
@@ -23,6 +24,12 @@ int main(){
 
   // Print data, and data using p
   std::cout<<"data is: "<<data<<" data accessed via p is: "<<*p<<"\n";
+
+  // To be safe, we should check p is not nullptr before using it
+  // Special short-cut: nullptr becomes false as a boolean, anything else true
+  if(p){
+    std::cout<<"p is not nullptr\n";
+  }
 
   // Increment data using p
   *p += 1;

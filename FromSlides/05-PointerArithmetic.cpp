@@ -35,4 +35,12 @@ int main(){
   *(data_p + 11) = 73; // Your compiler will NOT KNOW
   /* END PLAIN WRONG */
 
+  // Malloc only works for simple types: int, float etc
+  // YOU CANNOT malloc for std::string or any other class
+  // 'new' also gets heap memory, but properly initialises objects
+  int * data_n = new int;
+  int * data_arr = new int[10];
+
+  //Resulting pointers behave just like normal pointer to int, or pointer to 10 items
+
 };

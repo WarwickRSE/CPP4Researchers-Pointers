@@ -19,7 +19,7 @@ void fn_p(int * a){
 
   // Note precedence - we need these brackets
   // Otherwise we would increment the pointer, i.e the address
-  ++(*a);
+  ++(*a); // Affects whatever we passed
 
 };
 

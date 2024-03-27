@@ -24,6 +24,11 @@ We tend to use auto and inline initialisers a lot, so consider everything
 to be at least C++11. Smart pointers are C++11, but the nicest way
 to work with them is C++14, and we use this freely. Ten years is long enough, surely!
 
+If you've not seen it before, the {} in C/C++ can be used to open a "scope block" even without
+a keyword such as 'for' or 'if'. Variables created in here exist only inside it, like
+those inside a loop, and are destroyed at the closing-}. We use this in places
+to control our lifetimes and ensure things go "out-of-scope" to show bugs etc.
+
 ## Why are we being so heavy handed
 
 Because academic teaching of C++ is often a terrible mish-mash of old
