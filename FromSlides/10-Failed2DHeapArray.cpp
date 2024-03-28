@@ -35,7 +35,7 @@ int main(){
     std::cout<<"Expect 10, got: "<<arr2d[i] - arr2d[i-1]<<'\n';
   }
 
-  //Problem on line 14 - each malloc is separate action! No guarantee of contiguity
+  //Problem on line 14 - each block from 'new'  is separate action! No guarantee of contiguity
 
   // Old-school solution:
   int ** arr2d_s;
