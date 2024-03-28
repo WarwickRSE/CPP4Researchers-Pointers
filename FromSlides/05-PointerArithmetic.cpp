@@ -9,7 +9,7 @@ int main(){
 
   int * data_p;
 
-  data_p = (int*) malloc(10 * sizeof(int)); // Memory for 10 integers
+  data_p = new int[10]; // Memory for 10 integers
   // Sizeof(int) is the number of bytes per integer, probably 4 or 8
 
   // Now data_p points to ten integers, starting at data_p
@@ -35,12 +35,11 @@ int main(){
   *(data_p + 11) = 73; // Your compiler will NOT KNOW
   /* END PLAIN WRONG */
 
-  // Malloc only works for simple types: int, float etc
-  // YOU CANNOT malloc for std::string or any other class
-  // 'new' also gets heap memory, but properly initialises objects
-  int * data_n = new int;
-  int * data_arr = new int[10];
-
-  //Resulting pointers behave just like normal pointer to int, or pointer to 10 items
+  /* PLAIN WRONG */
+  // Technically the following code is invalid, however for
+  // plain data types like int it will probably work
+  data_p = (int*) malloc(10 * sizeof(int)); // Memory for 10 integers
+  // NO integers actually created, but creation is trivial so unlikely anything will break
+  /* END PLAIN WRONG */
 
 };
