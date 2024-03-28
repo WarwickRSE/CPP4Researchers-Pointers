@@ -9,9 +9,9 @@ int main(){
   //Naively:
   int sz = 10;
   int ** arr2d;
-  arr2d = (int**) malloc(sz * sizeof(int*));
+  arr2d = new int*[sz]; // 10 'int*'
   for(int i=0; i<sz; ++i){
-    arr2d[i] = (int*)malloc(sz*sizeof(int));
+    arr2d[i] = new int[sz];
   }
 
   for(int i=0; i<sz; ++i){
@@ -39,11 +39,11 @@ int main(){
 
   // Old-school solution:
   int ** arr2d_s;
-  arr2d_s = (int **) malloc(sz * sizeof(int*));
+  arr2d_s = new int*[sz];
 
  {// Use a block because then tmp wont hang about
   int * tmp; // Will be the actual array memory
-  tmp = (int*) malloc(sz*sz*sizeof(int));
+  tmp = new int[sz*sz];
   for(int i=0; i< sz; ++i){
     // Setup pointers to each row within tmp
     arr2d_s[i] = tmp;
